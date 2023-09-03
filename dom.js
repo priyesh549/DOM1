@@ -118,17 +118,118 @@
 
 
 // Query Selector assignment
-var seconditem = document.querySelector('.list-group-item:nth-child(2)')
-seconditem.style.backgroundColor = 'green'
+// var seconditem = document.querySelector('.list-group-item:nth-child(2)')
+// seconditem.style.backgroundColor = 'green'
 
-var thirditem = document.querySelector('.list-group-item:nth-child(3)')
-thirditem.style.visibility = 'hidden'
+// var thirditem = document.querySelector('.list-group-item:nth-child(3)')
+// thirditem.style.visibility = 'hidden'
 
-var Item = document.querySelectorAll('.list-group-item');
-Item[1].style.color = 'green'
+// var Item = document.querySelectorAll('.list-group-item');
+// Item[1].style.color = 'green'
 
-var odd = document.querySelectorAll('li:nth-child(odd)')
+// var odd = document.querySelectorAll('li:nth-child(odd)')
 
-for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor = '#f4f4f4'
-}
+// for(var i=0;i<odd.length;i++){
+//     odd[i].style.backgroundColor = '#f4f4f4'
+// }
+
+
+
+// TRAVERSING THE DOM
+var itemList = document.querySelector('#items')
+// parentNode
+// // console.log(itemList.parentNode)
+// itemList.parentNode.style.backgroundColor = '#f4f4f4'
+// console.log(itemList.parentNode.parentNode.parentNide);
+
+
+// parentElement
+// console.log(itemList.parentElement)
+// itemList.parentElement.style.backgroundColor = '#f4f4f4'
+// console.log(itemList.parentElement.parentNode.parentNide);
+
+
+// childNodes
+// console.log(itemList.childNodes);
+
+// children
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'Yellow'
+
+// firstChild
+// console.log(itemList.firstChild)
+
+
+// firstElementChild
+// console.log(itemList.firstElementChild)
+// itemList.firstElementChild.textContent = 'Hello 1'
+
+// lastElementChild
+// console.log(itemList.lastElementChild)
+// itemList.lastElementChild.textContent = 'Hello 4'
+
+
+// siblings
+// next sibling
+// console.log(itemList.nextSibling)
+// nextelementSibling
+// console.log(itemList.nextElementSibling)
+
+
+// previous sibling
+// console.log(itemList.previousSibling);
+
+// prevoius element sibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green'
+
+
+// Creating DOM ELEMENT
+// createElement
+
+// creatr a div
+var newDiv = document.createElement('div');
+// add class
+newDiv.className = 'Hello';
+
+// add Id
+newDiv.id = 'Hello1'
+
+// add attribute
+newDiv.setAttribute('title' , 'Hello Div')
+
+// create text Node
+var newDivText =  document.createTextNode('Hello World');
+
+// add text to div
+newDiv.appendChild(newDivText)
+
+var container = document.querySelector('header .container')
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+// newDiv.style.fontSize = '30px';
+
+container.insertBefore(newDiv,h1)
+
+var newDiv1 = document.createElement('div');
+// add class
+newDiv1.className = 'Hello';
+
+// add Id
+newDiv1.id = 'Hello1'
+
+// add attribute
+newDiv1.setAttribute('title' , 'Hello Div')
+
+// create text Node
+var newDivText1 =  document.createTextNode('Hello World');
+
+// add text to div
+newDiv1.appendChild(newDivText1)
+
+itemList.insertBefore(newDiv1,itemList.firstElementChild)
+
+
