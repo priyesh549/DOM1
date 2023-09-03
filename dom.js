@@ -113,5 +113,22 @@
 // var item = document.getElementsByClassName('list-group-item');
 // item[4].style.backgroundColor = '#f4f4f4'
 
-var item = document.getElementsByTagName('li');
-item[4].style.backgroundColor = '#ccc'
+// var item = document.getElementsByTagName('li');
+// item[4].style.backgroundColor = '#ccc'
+
+
+// Query Selector assignment
+var seconditem = document.querySelector('.list-group-item:nth-child(2)')
+seconditem.style.backgroundColor = 'green'
+
+var thirditem = document.querySelector('.list-group-item:nth-child(3)')
+thirditem.style.visibility = 'hidden'
+
+var Item = document.querySelectorAll('.list-group-item');
+Item[1].style.color = 'green'
+
+var odd = document.querySelectorAll('li:nth-child(odd)')
+
+for(var i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor = '#f4f4f4'
+}
