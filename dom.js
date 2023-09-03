@@ -99,12 +99,19 @@
 // }
 
 
-var thirditem = document.querySelector('.list-group-item:nth-child(3)');
-thirditem.style.backgroundColor = 'green'
+// var thirditem = document.querySelector('.list-group-item:nth-child(3)');
+// thirditem.style.backgroundColor = 'green'
 
-var items = document.querySelectorAll('.list-group-item');
+// var items = document.querySelectorAll('.list-group-item');
 
-for(var i=0;i<items.length;i++){
-    items[i].style.fontWeight = 'bold'
-}
+// for(var i=0;i<items.length;i++){
+//     items[i].style.fontWeight = 'bold'
+// }
 
+
+// Won't work since no class name is given
+// var item = document.getElementsByClassName('list-group-item');
+// item[4].style.backgroundColor = '#f4f4f4'
+
+var item = document.getElementsByTagName('li');
+item[4].style.backgroundColor = '#ccc'
